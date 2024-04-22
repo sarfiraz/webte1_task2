@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#header, #footer{
+
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+
+}
+.back{
+
+    background-color: darkcyan;
+}
+.poster{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+
+}
+a{
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    color: darkred;
+    background-color: lightgray;
+
+}
+
+.image{
+    width: 90%;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.content .small_pics{
+    width: 8vw;
+    height: 8vh;
+    float: left;
+    margin-right: 1rem;
+    padding-bottom: 0.5rem;
+
+}
+
+.list{
+    position: absolute;
+    list-style-type: none;
+}
+
+
+.list .icon{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background: grey;
+    margin: 0 1rem;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.list .icon1{
+    top: 13vh;
+    left: 18vw;
+}
+.list .icon2{
+    top: 10vh;
+    left: 40vw;
+}
+.list .icon3{
+    top: 20vh;
+    left: 56vw;
+}
+.list .icon4{
+    top: 22vh;
+    left: 67vw;
+}
+.list .icon5{
+    top: 28vh;
+    left: 77vw;
+}
+
+
+.list li:hover{
+    background: #111;
+    box-shadow: 0 0 0 0.5rem #999,
+    0 0 0 1rem orange;
+    z-index: 1;
+}
+.list li .content{
+    position: absolute;
+    font-size: 1.2rem;
+    top: 5vh;
+    width: 20vw;
+    padding: 0.5rem;
+    background: lightcyan;
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility: hidden;
+    transition: 0.2s;
+}
+.list li:hover .content{
+    visibility: visible;
+    transform: translateX(-50%) translateY(0px);
+
+
+}
+
+@media only screen and (max-width:700px) {
+    h2{
+        font-size: 1.5rem;
+    }
+    .content p{
+        font-family: Arial, serif;
+        font-size: 0.75rem;
+    }
+    .content .small_pics{
+        display: block;
+        width: 10vw;
+        height: 8vh;
+        float: left;
+
+    }
+    .list li .content{
+        width: 30vw;
+    }
+}
+
